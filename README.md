@@ -6,24 +6,24 @@ A deep learning project that implements transfer learning using a pre-trained Re
 This project demonstrates the power of transfer learning by adapting a ResNet50 model, originally trained on ImageNet, to classify images from the CIFAR-100 dataset. The model leverages pre-trained feature extraction capabilities while being fine-tuned for the specific task of classifying 100 different object categories.
 
 ## Features
-Transfer Learning: Utilizes pre-trained ResNet50 weights from ImageNet
+- Transfer Learning: Utilizes pre-trained ResNet50 weights from ImageNet
 
-Custom Architecture: Adds custom classification layers for CIFAR-100 (100 classes)
+- Custom Architecture: Adds custom classification layers for CIFAR-100 (100 classes)
 
-Data Preprocessing: Implements proper image resizing and normalization
+- Data Preprocessing: Implements proper image resizing and normalization
 
-Fine-tuning Strategy: Selective layer freezing and unfreezing for optimal training
+- Fine-tuning Strategy: Selective layer freezing and unfreezing for optimal training
 
-Performance Monitoring: Tracks training and validation metrics
+- Performance Monitoring: Tracks training and validation metrics
 
 ## Results
-Final Validation Accuracy: ~75%
+- Final Validation Accuracy: ~75%
 
-Training Epochs: 10
+- Training Epochs: 10
 
-Model Size: ~98.37 MB
+- Model Size: ~98.37 MB
 
-Total Parameters: 25,788,388 (25.7M trainable, 53K non-trainable)
+- Total Parameters: 25,788,388 (25.7M trainable, 53K non-trainable)
 
 ## Model Architecture
 - Component	Details
