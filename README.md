@@ -26,45 +26,46 @@ Model Size: ~98.37 MB
 Total Parameters: 25,788,388 (25.7M trainable, 53K non-trainable)
 
 ## Model Architecture
-Component	Details
-Base Model	ResNet50 pre-trained on ImageNet
-Input Shape	(224, 224, 3)
-Global Pooling	GlobalAveragePooling2D
-Dense Layer	1024 units with ReLU activation
-Output Layer	100 units with Softmax activation
-Total Parameters	25,788,388
+- Component	Details
+- Base Model	ResNet50 pre-trained on ImageNet
+- Input Shape	(224, 224, 3)
+- Global Pooling	GlobalAveragePooling2D
+- Dense Layer	1024 units with ReLU activation
+- Output Layer	100 units with Softmax activation
+- Total Parameters	25,788,388
 ## Training Details
-Optimizer: Adam
+- Optimizer: Adam
 
-Loss Function: Sparse Categorical Crossentropy
+- Loss Function: Sparse Categorical Crossentropy
 
-Batch Size: 32
+- Batch Size: 32
 
-Epochs: 10
+- Epochs: 10
 
-Fine-tuning: Layers 143+ unfrozen
+- Fine-tuning: Layers 143+ unfrozen
 
-Data Augmentation: ResNet50 preprocessing
+- Data Augmentation: ResNet50 preprocessing
 
 ## Technical Implementation
 ### Data Preprocessing
-Images resized from 32×32 to 224×224 pixels
+- Images resized from 32×32 to 224×224 pixels
 
-ResNet50-specific preprocessing applied
+- ResNet50-specific preprocessing applied
 
-Batch processing with TensorFlow datasets
+- Batch processing with TensorFlow datasets
 
 ### Transfer Learning Strategy
-Start with ImageNet pre-trained weights
+- Start with ImageNet pre-trained weights
 
-Replace final classification layer for 100 classes
+- Replace final classification layer for 100 classes
 
-Freeze early feature extraction layers
+- Freeze early feature extraction layers
 
-Fine-tune deeper layers for CIFAR-100 specific features
+- Fine-tune deeper layers for CIFAR-100 specific features
 
 ## Performance Metrics
-Epoch	Training Accuracy	Validation Accuracy	Training Loss	Validation Loss
-1	          49.8%	                69.1%	            1.92	        1.02
-5	          94.2%	                72.8%	            0.17	        1.40
-10	        98.0%	                74.9%	            0.06	         1.52
+| Epoch | Training Accuracy | Validation Accuracy | Training Loss | Validation Loss |
+|-------|-------------------|---------------------|---------------|-----------------|
+| 1     | 49.8%             | 69.1%               | 1.92          | 1.02            |
+| 5     | 94.2%             | 72.8%               | 0.17          | 1.40            |
+| 10    | 98.0%             | 74.9%               | 0.06          | 1.52            |
